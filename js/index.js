@@ -69,11 +69,6 @@ const featuresTxt = document.querySelector(".text-content p");
 featuresTxt.textContent =
 	"Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-const topTitles = document.querySelectorAll("top-content h4");
-topTitles.forEach(el => {
-	el.textContent = siteContent["main-content"]["about-h4"];
-});
-
 // Middle Img
 
 const midImg = document.querySelector("#middle-img");
@@ -98,3 +93,20 @@ contactTxt.textContent =
 // Footer
 const footer = document.querySelector("footer");
 footer.textContent = "Copyright Great Idea! 2018";
+
+// Add New Content
+links.forEach(element => {
+	element.style.color = "green";
+});
+
+const newLink1 = document.createElement("a");
+newLink1.textContent = "Eric";
+newLink1.style.color = "green";
+const linkFirst = document.querySelector("nav");
+linkFirst.prepend(newLink1);
+
+const newLink2 = document.createElement("a");
+newLink2.textContent = "Richards";
+newLink2.style.color = "green";
+const linkLast = document.querySelector("nav");
+linkLast.appendChild(newLink2);
